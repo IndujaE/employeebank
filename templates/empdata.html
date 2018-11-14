@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block empblock %}
+
+
+
+<div class="row mx-auto">
+        <div class="jumbotron">
+            <h3> EMPLOYEE DETAILS </h3>
+        </div>
+        
+
+        <div class="col-sm-6">
+
+        {% for e in getemployee%}
+        <div class="list-group">
+            
+
+                <li class="list-group-item bg-dark active">{{e.id}}</li>
+                <li class="list-group-item ">{{e.name}}</li>
+                <li class="list-group-item ">{{e.email}}</li>
+                <li class="list-group-item ">{{e.mobile}}</li>
+                <li class="list-group-item ">{{e.salary}}</li>
+        </div><br>
+        {% endfor %}
+
+        
+    </div>
+</div>
+ 
+{% endblock %}
